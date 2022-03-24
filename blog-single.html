@@ -131,9 +131,6 @@
               <p>
                 <strong>Inteligencia artificial</strong>
               </p>
-              <p>La inteligencia artificial nació en los años 1950's cuando un grupo de pioneros del nuevo campo de la
-                informática empezaron a preguntarse si se podrían hacer que los ordenadores "pensaran" por su cuenta,
-                una cuestión cuyas ramificaciones seguimos explorando aun hasta el día de hoy.</p>
               <p>Aunque muchas de las ideas subyacentes se habían gestado en los años 50's (incluso décadas anteriores),
                 la "inteligencia artificial" cristalizó finalmente como campo de investigación en 1956, cuando John
                 McCarthy, entonces un joven profesor asistente de matemáticas en el Dartmouth College, organizó un
@@ -163,10 +160,10 @@
                   bases de datos explícitas. Este enfoque se conoce como IA simbólica.</strong> Fue el paradigma
                 dominante en la IA desde los años 50's hasta finales de los 80's, y alcanzó su máxima popularidad
                 durante el auge de los sistemas expertos de los años 80's.</p>
-              Aunque la IA simbólica demostró ser adecuada para resolver problemas lógicos bien definidos, como jugar
-              al ajedrez, resultó ser intratable para averiguar reglas explícitas para resolver problemas más
-              complejos y difusos, como la clasificación de imágenes, el reconocimiento del habla o la traducción del
-              lenguaje natural. Aquí surgió el aprendizaje automático.</p>
+              <p>Aunque la IA simbólica demostró ser adecuada para resolver problemas lógicos bien definidos, como jugar
+                al ajedrez, resultó ser intratable para averiguar reglas explícitas para resolver problemas más
+                complejos y difusos, como la clasificación de imágenes, el reconocimiento del habla o la traducción del
+                lenguaje natural. Aquí surgió el aprendizaje automático.</p>
               <p><strong>Aprendizaje automático</strong></p>
               <p>¿Podría un ordenador "originar" algo, o estaría siempre obligado a ejecutar debidamente procesos que
                 los humanos entendemos perfectamente? ¿Podría ser capaz de un pensamiento original? ¿Podría aprender de
@@ -175,18 +172,60 @@
                 prueba de Turing y los conceptos clave que darían forma a la IA2.</p>
               <p>La forma habitual de hacer que un ordenador realice un trabajo útil es que un programador humano
                 escriba las reglas -un programa informático- que deben seguirse para convertir los datos de entrada en
-                las respuestas adecuadas. El aprendizaje automático le da la vuelta: la máquina observa los datos de
-                entrada y las respuestas correspondientes, y averigua cuáles deben ser las reglas. <strong>Un sistema de
-                  aprendizaje automático se entrena en lugar de programarse explícitamente. </strong> Se le presentan
+                las respuestas adecuadas. El aprendizaje automático le da la vuelta a esta idea: la máquina observa los
+                datos de
+                entrada y las respuestas correspondientes, y averigua cuáles deben ser las "reglas". <strong>Un sistema
+                de aprendizaje automático se entrena en lugar de programarse explícitamente. </strong> Se le presentan
                 muchos ejemplos relacionados con una tarea, y encuentra una estructura estadística en estos ejemplos
                 que, finalmente, permite al sistema elaborar reglas para automatizar la tarea.</p>
               <div class="card-img">
                 <a href="blog-single.html"><img src="img/post1_1.jpg" alt="" class="img-fluid"></a>
               </div>
               <p>Por ejemplo, si quieres automatizar la tarea de separar las fotos de perros de cualquier otras, puedes
-                presentarle a un sistema de aprendizaje automático muchos ejemplos de fotos previamente ya etiquetados,
+                presentarle a un sistema de aprendizaje automático muchos ejemplos de fotos previamente ya etiquetadas,
                 y el sistema aprendería reglas estadísticas para asociar fotos específicas a etiquetas específicas
-                (perro, no perro).</p>
+                (perro y no perro).</p>
+              <p>El aprendizaje automático está relacionado con la estadística matemática, pero se diferencia de ella en
+                varios aspectos importantes, en el mismo sentido en que la medicina está relacionada con la química,
+                pero no puede reducirse a ella. A diferencia de la estadística, el aprendizaje automático tiende a
+                tratar con conjuntos de datos grandes y complejos (como un conjunto de datos de millones de imágenes,
+                cada una de ellas formada por decenas de miles de píxeles) para los que el análisis estadístico clásico,
+                como el análisis bayesiano, sería poco práctico. En consecuencia, el aprendizaje automático, y
+                especialmente el aprendizaje profundo, presenta relativamente poca teoría matemática (quizá demasiado
+                poca). A diferencia de la física teórica o las matemáticas, el aprendizaje automático es un campo muy
+                práctico que se basa en los resultados empíricos y depende en gran medida de los avances en software y
+                hardware.</p>
+              <p><strong>Aprendizaje de reglas y representaciones a partir de los datos</strong></p>
+              <p>Acabamos de decir que el aprendizaje automático descubre reglas para ejecutar una tarea de 
+                procesamiento de datos, dados ejemplos de lo que se espera. Por lo tanto, para realizar el aprendizaje 
+                automático, necesitamos tres cosas:</p>
+              <p><strong>•	Puntos de datos de entrada:</strong> por ejemplo, si la tarea es el reconocimiento del habla, estos puntos 
+                de datos podrían ser archivos de sonido de personas hablando. Si la tarea es el etiquetado de imágenes, 
+                podrían ser fotografías.</p>
+              <p><strong>•	Ejemplos de resultados esperados:</strong> en una tarea de reconocimiento del habla, podrían ser transcripciones 
+              de archivos de sonido generadas por humanos. En una tarea de imágenes, los resultados esperados podrían 
+              ser etiquetas como "perro", "gato", etc.</p>
+              <p><strong>•	Una forma de medir si el algoritmo está haciendo un buen trabajo:</strong> es necesario para determinar la 
+              distancia entre el resultado actual del algoritmo y su resultado esperado. La medición se utiliza como 
+              señal de retroalimentación para ajustar el funcionamiento del algoritmo. Este paso de ajuste es lo que 
+              llamamos aprendizaje.</p>
+              <p>Un modelo de aprendizaje automático transforma sus datos de entrada en resultados significativos, un 
+              proceso que se "aprende" a partir de la exposición a ejemplos conocidos de entradas y salidas. Por lo tanto, 
+              el problema central en el aprendizaje automático y el aprendizaje profundo es transformar los datos de manera 
+              significativa: en otras palabras, aprender representaciones útiles de los datos de entrada, 
+              representaciones que nos acerquen a la salida esperada.</p>
+              <p>Entonces, ¿qué es una representación? En esencia, es una forma diferente de ver los datos, 
+              de representarlos o codificarlos. Por ejemplo, una imagen en color puede codificarse en el formato RGB 
+              (rojo-verde-azul) o en el formato HSV (tono-saturación-valor): se trata de dos representaciones diferentes 
+              de los mismos datos. Algunas tareas que pueden ser difíciles con una representación pueden ser fáciles 
+              con otra. Los modelos de aprendizaje automático consisten en encontrar las representaciones adecuadas 
+              para sus datos de entrada, es decir, transformaciones de los datos que los hacen más aptos para la 
+              tarea en cuestión.</p>
+              <p>Aquí un ejemplo, consideremos un eje x, un eje y algunos puntos representados por sus coordenadas en 
+              el sistema (x, y):</p>
+              <div class="card-img">
+                <a href="blog-single.html"><img src="img/post1_2.jpg" alt="" class="img-fluid"></a>
+              </div>
             </div>
           </div>
           <div class="form-comments">
