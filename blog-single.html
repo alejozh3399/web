@@ -343,6 +343,54 @@
                     pensar en una red profunda como un proceso de destilación de información en varias etapas, en el que
                     la información pasa por filtros sucesivos y sale cada vez más purificada.
                   </p>
+                  <p>
+                    Así que eso es lo que es el aprendizaje profundo, técnicamente: una forma de aprender
+                    representaciones de datos en varias etapas. Es una idea sencilla, pero resulta que mecanismos muy
+                    simples, suficientemente escalados, pueden acabar pareciendo mágicos.
+                  </p>
+                  <p>
+                    <strong>Entender cómo funciona el aprendizaje profundo</strong>
+                  </p>
+                  <p>Ya sabes que el aprendizaje automático consiste en asignar entradas (como imágenes) a objetivos
+                    (como la etiqueta "gato"), lo que se hace observando muchos ejemplos de entradas y objetivos.
+                    También sabes que las redes neuronales profundas realizan este mapeo de entrada a objetivo a través
+                    de una secuencia profunda de transformaciones de datos simples (capas) y que estas transformaciones
+                    de datos se aprenden mediante la exposición a ejemplos. Ahora veamos cómo se produce este
+                    aprendizaje, concretamente.
+                  </p>
+                  <p>
+                    La especificación de lo que hace una capa a sus datos de entrada se almacena en los pesos de la
+                    capa, que en esencia son un montón de números. En términos técnicos, diríamos que la transformación
+                    implementada por una capa está parametrizada por sus pesos. En este contexto, aprender significa
+                    encontrar un conjunto de valores para los pesos de todas las capas de una red, de manera que la red
+                    asigne correctamente las entradas de los ejemplos a sus objetivos asociados. Pero la cuestión es que
+                    una red neuronal profunda puede contener decenas de millones de parámetros. Encontrar los valores
+                    correctos para todos ellos puede parecer una tarea de enormes proporciones, sobre todo teniendo en
+                    cuenta que la modificación del valor de un parámetro afectará al comportamiento de todos los demás.
+                  </p>
+                  <div class="card-img">
+                    <a><img src="img/post1_6.jpg" alt="" class="img-fluid"></a>
+                  </div>
+                  <p>
+                    Para controlar algo, primero hay que poder observarlo. <strong>Para controlar la salida de una red
+                      neuronal, hay que ser capaz de medir lo lejos que está esa salida de lo que se esperaba. Este es
+                      el trabajo de la función de pérdida de la red, también llamada a veces función objetivo o función
+                      de coste.</strong> La función de pérdida toma las predicciones de la red y el objetivo real (lo
+                    que usted quería que la red produjera) y calcula una puntuación de distancia, capturando lo bien que
+                    lo ha hecho la red en este ejemplo específico.
+                  </p>
+                  <div class="card-img">
+                    <a><img src="img/post1_7.jpg" alt="" class="img-fluid"></a>
+                  </div>
+                  <p>
+                    El truco fundamental en el aprendizaje profundo es utilizar esta puntuación como señal de
+                    retroalimentación para ajustar un poco el valor de los pesos, en una dirección que reduzca la
+                    puntuación de pérdida. Este ajuste es el trabajo del optimizador, que implementa lo que se llama
+                    <strong>el algoritmo de retropropagación: el algoritmo central en el aprendizaje profundo.</strong>
+                  </p>
+                  <div class="card-img">
+                    <a><img src="img/post1_8.jpg" alt="" class="img-fluid"></a>
+                  </div>
             </div>
           </div>
           <div class="form-comments">
