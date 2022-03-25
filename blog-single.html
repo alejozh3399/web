@@ -295,12 +295,53 @@
                     representaciones cada vez más significativas. El término "profundo" de "aprendizaje profundo" no
                     hace referencia a ningún tipo de comprensión más profunda que se logre con este enfoque, sino que
                     representa esta idea de capas sucesivas de representaciones. <strong>El número de capas que
-                    contribuyen a un modelo de los datos se denomina profundidad del modelo.</strong> El aprendizaje
+                      contribuyen a un modelo de los datos se denomina profundidad del modelo.</strong> El aprendizaje
                     profundo moderno a menudo implica decenas o incluso cientos de capas sucesivas de representaciones,
                     y todas ellas aprenden automáticamente a partir de la exposición a los datos de entrenamiento.
                     Mientras tanto, otros enfoques del aprendizaje automático tienden a centrarse en el aprendizaje de
                     sólo una o dos capas de representaciones de los datos; por lo tanto, a veces se llaman aprendizaje
                     superficial.
+                  </p>
+                  <p>
+                    En el aprendizaje profundo, estas representaciones en capas se aprenden a través de modelos llamados
+                    redes neuronales, estructurados en capas literales apiladas unas sobre otras. El término "red
+                    neuronal" hace referencia a la neurobiología, pero, aunque algunos de los conceptos centrales del
+                    aprendizaje profundo se desarrollaron en parte inspirándose en nuestra comprensión del cerebro (en
+                    particular, de la corteza visual), los modelos de aprendizaje profundo no son modelos del cerebro.
+                    No hay pruebas de que el cerebro implemente nada parecido a los mecanismos de aprendizaje utilizados
+                    en los modelos modernos de aprendizaje profundo. Es posible que te encuentres con artículos de
+                    ciencia popular en los que se proclama que el aprendizaje profundo funciona como el cerebro o que se
+                    ha modelado a partir de él, pero no es así. Sería confuso y contraproducente para los recién
+                    llegados a este campo pensar que el aprendizaje profundo está relacionado de algún modo con la
+                    neurobiología; no es necesario ese manto de mística y misterio "igual que nuestras mentes", y es
+                    mejor que olviden todo lo que hayan leído sobre hipotéticos vínculos entre el aprendizaje profundo y
+                    la biología. Para nuestro propósito, el aprendizaje profundo es un marco matemático para aprender
+                    representaciones a partir de datos.
+                  </p>
+                  <p>
+                    <strong>¿Qué aspecto tienen las representaciones aprendidas por un algoritmo de aprendizaje
+                      profundo? </strong>
+                  </p>
+                  <p>
+                    Examinemos cómo una red de varias capas de profundidad transforma una imagen de un dígito para
+                    reconocer de qué dígito se trata:
+                  </p>
+                  <div class="card-img">
+                    <a><img src="img/post1_4.jpg" alt="" class="img-fluid"></a>
+                  </div>
+                  <p>
+                    Esta imagen representa el funcionamiento básico de una red neuronal, cada capa extrae información y
+                    se la envía a la siguiente capa (la salida de una es la entrada de la siguiente) y así sucesivamente
+                    hasta llegar a la predicción. Podemos representar mejor la red de la siguiente forma:
+                  </p>
+                  <div class="card-img">
+                    <a><img src="img/post1_5.jpg" alt="" class="img-fluid"></a>
+                  </div>
+                  <p>
+                    Como puedes ver, la red transforma la imagen de los dígitos en representaciones cada vez más
+                    diferentes de la imagen original y cada vez más informativas sobre el resultado final. Se puede
+                    pensar en una red profunda como un proceso de destilación de información en varias etapas, en el que
+                    la información pasa por filtros sucesivos y sale cada vez más purificada.
                   </p>
             </div>
           </div>
