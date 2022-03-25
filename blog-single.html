@@ -175,11 +175,11 @@
                 las respuestas adecuadas. El aprendizaje automático le da la vuelta a esta idea: la máquina observa los
                 datos de
                 entrada y las respuestas correspondientes, y averigua cuáles deben ser las "reglas". <strong>Un sistema
-                de aprendizaje automático se entrena en lugar de programarse explícitamente. </strong> Se le presentan
+                  de aprendizaje automático se entrena en lugar de programarse explícitamente. </strong> Se le presentan
                 muchos ejemplos relacionados con una tarea, y encuentra una estructura estadística en estos ejemplos
                 que, finalmente, permite al sistema elaborar reglas para automatizar la tarea.</p>
               <div class="card-img">
-                <a href="blog-single.html"><img src="img/post1_1.jpg" alt="" class="img-fluid"></a>
+                <a><img src="img/post1_1.jpg" alt="" class="img-fluid"></a>
               </div>
               <p>Por ejemplo, si quieres automatizar la tarea de separar las fotos de perros de cualquier otras, puedes
                 presentarle a un sistema de aprendizaje automático muchos ejemplos de fotos previamente ya etiquetadas,
@@ -196,36 +196,112 @@
                 práctico que se basa en los resultados empíricos y depende en gran medida de los avances en software y
                 hardware.</p>
               <p><strong>Aprendizaje de reglas y representaciones a partir de los datos</strong></p>
-              <p>Acabamos de decir que el aprendizaje automático descubre reglas para ejecutar una tarea de 
-                procesamiento de datos, dados ejemplos de lo que se espera. Por lo tanto, para realizar el aprendizaje 
+              <p>Acabamos de decir que el aprendizaje automático descubre reglas para ejecutar una tarea de
+                procesamiento de datos, dados ejemplos de lo que se espera. Por lo tanto, para realizar el aprendizaje
                 automático, necesitamos tres cosas:</p>
-              <p><strong>•	Puntos de datos de entrada:</strong> por ejemplo, si la tarea es el reconocimiento del habla, estos puntos 
-                de datos podrían ser archivos de sonido de personas hablando. Si la tarea es el etiquetado de imágenes, 
+              <p><strong>• Puntos de datos de entrada:</strong> por ejemplo, si la tarea es el reconocimiento del habla,
+                estos puntos
+                de datos podrían ser archivos de sonido de personas hablando. Si la tarea es el etiquetado de imágenes,
                 podrían ser fotografías.</p>
-              <p><strong>•	Ejemplos de resultados esperados:</strong> en una tarea de reconocimiento del habla, podrían ser transcripciones 
-              de archivos de sonido generadas por humanos. En una tarea de imágenes, los resultados esperados podrían 
-              ser etiquetas como "perro", "gato", etc.</p>
-              <p><strong>•	Una forma de medir si el algoritmo está haciendo un buen trabajo:</strong> es necesario para determinar la 
-              distancia entre el resultado actual del algoritmo y su resultado esperado. La medición se utiliza como 
-              señal de retroalimentación para ajustar el funcionamiento del algoritmo. Este paso de ajuste es lo que 
-              llamamos aprendizaje.</p>
-              <p>Un modelo de aprendizaje automático transforma sus datos de entrada en resultados significativos, un 
-              proceso que se "aprende" a partir de la exposición a ejemplos conocidos de entradas y salidas. Por lo tanto, 
-              el problema central en el aprendizaje automático y el aprendizaje profundo es transformar los datos de manera 
-              significativa: en otras palabras, aprender representaciones útiles de los datos de entrada, 
-              representaciones que nos acerquen a la salida esperada.</p>
-              <p>Entonces, ¿qué es una representación? En esencia, es una forma diferente de ver los datos, 
-              de representarlos o codificarlos. Por ejemplo, una imagen en color puede codificarse en el formato RGB 
-              (rojo-verde-azul) o en el formato HSV (tono-saturación-valor): se trata de dos representaciones diferentes 
-              de los mismos datos. Algunas tareas que pueden ser difíciles con una representación pueden ser fáciles 
-              con otra. Los modelos de aprendizaje automático consisten en encontrar las representaciones adecuadas 
-              para sus datos de entrada, es decir, transformaciones de los datos que los hacen más aptos para la 
-              tarea en cuestión.</p>
-              <p>Aquí un ejemplo, consideremos un eje x, un eje y algunos puntos representados por sus coordenadas en 
-              el sistema (x, y):</p>
+              <p><strong>• Ejemplos de resultados esperados:</strong> en una tarea de reconocimiento del habla, podrían
+                ser transcripciones
+                de archivos de sonido generadas por humanos. En una tarea de imágenes, los resultados esperados podrían
+                ser etiquetas como "perro", "gato", etc.</p>
+              <p><strong>• Una forma de medir si el algoritmo está haciendo un buen trabajo:</strong> es necesario para
+                determinar la
+                distancia entre el resultado actual del algoritmo y su resultado esperado. La medición se utiliza como
+                señal de retroalimentación para ajustar el funcionamiento del algoritmo. Este paso de ajuste es lo que
+                llamamos aprendizaje.</p>
+              <p>Un modelo de aprendizaje automático transforma sus datos de entrada en resultados significativos, un
+                proceso que se "aprende" a partir de la exposición a ejemplos conocidos de entradas y salidas. Por lo
+                tanto,
+                el problema central en el aprendizaje automático y el aprendizaje profundo es transformar los datos de
+                manera
+                significativa: en otras palabras, aprender representaciones útiles de los datos de entrada,
+                representaciones que nos acerquen a la salida esperada.</p>
+              <p>Entonces, ¿qué es una representación? En esencia, es una forma diferente de ver los datos,
+                de representarlos o codificarlos. Por ejemplo, una imagen en color puede codificarse en el formato RGB
+                (rojo-verde-azul) o en el formato HSV (tono-saturación-valor): se trata de dos representaciones
+                diferentes
+                de los mismos datos. Algunas tareas que pueden ser difíciles con una representación pueden ser fáciles
+                con otra. Los modelos de aprendizaje automático consisten en encontrar las representaciones adecuadas
+                para sus datos de entrada, es decir, transformaciones de los datos que los hacen más aptos para la
+                tarea en cuestión.</p>
+              <p>Aquí un ejemplo, consideremos un eje x, un eje y algunos puntos representados por sus coordenadas en
+                el sistema (x, y):</p>
               <div class="card-img">
-                <a href="blog-single.html"><img src="img/post1_2.jpg" alt="" class="img-fluid"></a>
+                <a><img src="img/post1_2.jpg" alt="" class="img-fluid"></a>
               </div>
+              <p>Como puedes ver, tenemos unas cuantas cruces azules y unos cuantos puntos naranjas. Supongamos que
+                queremos desarrollar un algoritmo que pueda tomar las coordenadas (x, y) de un punto y que dé como
+                resultado la probabilidad que cruz o punto. En este caso,</p>
+              <p><strong>•</strong> Las entradas son las coordenadas (x, y).</p>
+              <p><strong>•</strong> Los resultados esperados son los colores (y formas) de nuestros puntos.</p>
+              <p><strong>•</strong> Una forma de medir si nuestro algoritmo está haciendo un buen trabajo podría ser,
+                por ejemplo, el porcentaje de puntos que se clasifican correctamente.</p>
+              <div class="card-img">
+                <a><img src="img/post1_3.jpg" alt="" class="img-fluid"></a>
+              </div>
+              <p>En este nuevo sistema de coordenadas, se puede decir que las coordenadas de nuestros puntos son una
+                nueva representación de nuestros datos. Y es una buena representación. Con esta representación, el
+                problema de clasificación puede expresarse como una simple regla: "Las cruces son tales que x > 0", o
+                "Los puntos son tales que x < 0". Esta nueva representación, combinada con esta sencilla regla, resuelve
+                  claramente este problema de clasificación. </p>
+                  <p>En este caso, hemos definido el cambio de coordenadas a mano: hemos utilizado nuestra inteligencia
+                    humana para elaborar nuestra propia representación adecuada de los datos. Esto está bien para un
+                    problema tan sencillo, pero ¿podría hacer lo mismo si la tarea fuera clasificar imágenes de dígitos
+                    escritos a mano? ¿Podríamos escribir transformaciones de imagen explícitas, ejecutables por
+                    ordenador, que permitieran distinguir la diferencia entre un 6 y un 8, entre un 1 y un 7, en todo
+                    tipo de caligrafía?
+                  </p>
+                  <p>Esto es posible hasta cierto punto. Las reglas basadas en representaciones de los dígitos, como el
+                    "número de bucles cerrados" o los histogramas de píxeles verticales y horizontales, pueden hacer un
+                    trabajo decente para distinguir los dígitos escritos a mano. Pero encontrar esas representaciones
+                    útiles por uno mismo es un trabajo duro y, como puedes imaginar, el sistema resultante basado en
+                    reglas es frágil, y una pesadilla de mantener. Cada vez que te encuentres con un nuevo ejemplo de
+                    escritura que rompa tus reglas cuidadosamente pensadas, tendrás que añadir nuevas transformaciones
+                    de datos y nuevas reglas, teniendo en cuenta su interacción con todas las reglas anteriores.
+                  </p>
+                  <p>Probablemente estés pensando que, si este proceso es tan doloroso, ¿podríamos automatizarlo? ¿Y si
+                    intentamos buscar sistemáticamente diferentes conjuntos de representaciones de los datos generadas
+                    automáticamente y reglas basadas en ellas, identificando las buenas utilizando como
+                    retroalimentación el porcentaje de dígitos que se clasifican correctamente en algún conjunto de
+                    datos de desarrollo? En ese caso, estaríamos realizando un aprendizaje automático. <strong>El
+                      aprendizaje, en el contexto del aprendizaje automático, describe un proceso de búsqueda automática
+                      de transformaciones de datos que producen representaciones útiles de algunos datos, guiadas por
+                      algunas representaciones de señales de retroalimentación que son susceptibles de reglas más
+                      simples que resuelven la tarea en cuestión</strong>.
+                  </p>
+                  <p>
+                    Estas transformaciones pueden ser cambios de coordenadas (como en nuestro ejemplo de clasificación
+                    de coordenadas 2D), o tomar un histograma de píxeles y contar bucles, pero también podrían ser
+                    proyecciones lineales, traslaciones, operaciones no lineales, etc.
+                  </p>
+                  <p>
+                    Los algoritmos de aprendizaje automático no suelen ser creativos a la hora de encontrar estas
+                    transformaciones, sino que se limitan a buscar en un conjunto predefinido de operaciones, llamado
+                    <strong>espacio de hipótesis</strong>. Por ejemplo, el espacio de todos los posibles cambios de
+                    coordenadas sería nuestro espacio de hipótesis en el ejemplo de clasificación de coordenadas 2D.
+                  </p>
+                  <p>
+                    Así que eso es el aprendizaje automático, de forma concisa: buscar representaciones y reglas útiles
+                    sobre unos datos de entrada, dentro de un espacio predefinido de posibilidades, utilizando la guía
+                    de una señal de retroalimentación. Esta sencilla idea permite resolver una gama muy amplia de tareas
+                    intelectuales, desde el reconocimiento del habla hasta la conducción autónoma.
+                  </p>
+                  <p><strong> Lo "profundo" del "aprendizaje profundo" </strong></p>
+                  <p>El aprendizaje profundo es un campo del aprendizaje automático: una nueva forma de aprender
+                    representaciones a partir de los datos que hace hincapié en el aprendizaje de capas sucesivas de
+                    representaciones cada vez más significativas. El término "profundo" de "aprendizaje profundo" no
+                    hace referencia a ningún tipo de comprensión más profunda que se logre con este enfoque, sino que
+                    representa esta idea de capas sucesivas de representaciones. <strong>El número de capas que
+                    contribuyen a un modelo de los datos se denomina profundidad del modelo.</strong> El aprendizaje
+                    profundo moderno a menudo implica decenas o incluso cientos de capas sucesivas de representaciones,
+                    y todas ellas aprenden automáticamente a partir de la exposición a los datos de entrenamiento.
+                    Mientras tanto, otros enfoques del aprendizaje automático tienden a centrarse en el aprendizaje de
+                    sólo una o dos capas de representaciones de los datos; por lo tanto, a veces se llaman aprendizaje
+                    superficial.
+                  </p>
             </div>
           </div>
           <div class="form-comments">
