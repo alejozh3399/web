@@ -117,9 +117,70 @@
                 siguientes librerías: Pandas, Numpy, Matplotlib, Seaborn, Sklearn, Keras y Tensorflow2.
               </p>
               <p>Primero cargamos las librerías:</p>
-              <code class="language-es">import pandas as pd</code></p>
-              <code class="language-es">import numpy as np </code>
-              
+              <div class="highlight">
+                <span class="rosa">import</span>
+                <span class="verde">pandas</span>
+                <span class="rosa">as</span>
+                <span class="verde">pd</span>
+                <br>
+                <span class="rosa">import</span>
+                <span class="verde">matplotlib.pyplot</span>
+                <span class="rosa">as</span>
+                <span class="verde">plt</span>
+                <br>
+                <span class="rosa">import</span>
+                <span class="verde">keras</span>
+                <span class="rosa">as</span>
+                <span class="verde">keras</span>
+                <br>
+                <span class="rosa">import</span>
+                <span class="verde">numpy</span>
+                <span class="rosa">as</span>
+                <span class="verde">np</span>
+                <br>
+                <span class="rosa">import</span>
+                <span class="verde">seaborn</span>
+                <span class="rosa">as</span>
+                <span class="verde">sns</span>
+                <br>
+                <span class="rosa">import</span>
+                <span class="verde">tensorflow</span>
+                <span class="rosa">as</span>
+                <span class="verde">tf</span>
+                <br>
+                <span class="rosa">from</span>
+                <span class="verde">keras</span>
+                <span class="rosa">import</span>
+                <span class="verde">layers</span>
+                <br>
+                <span class="rosa">from</span>
+                <span class="verde">sklearn.ensemble</span>
+                <span class="rosa">import</span>
+                <span class="verde">RandomForestRegressor</span>
+                <br>
+                <span class="rosa">from</span>
+                <span class="verde">sklearn.metrics</span>
+                <span class="rosa">import</span>
+                <span class="verde">mean_squared_error</span>
+                <br>
+                <span class="rosa">from</span>
+                <span class="verde">sklearn.model_selection</span>
+                <span class="rosa">import</span>
+                <span class="verde">train_test_split</span>
+                <br>
+                <span class="rosa">from</span>
+                <span class="verde">sklearn.svm</span>
+                <span class="rosa">import</span>
+                <span class="verde">SVR</span>
+              </div>
+              <p>
+                Una vez hecho esto ya podemos cargar los datos, los guardaremos en una variable llamada "data".
+              </p>
+              <div class="highlight">
+                <span class="azul">data</span>
+                <span class="blanco">=</span>
+                <span class="verde">pd.read_csv</span>(<span class="n">'.../calificaciones-de-matematicas.csv'</span>)
+              </div>
             </div>
           </div>
           <div class="form-comments">
