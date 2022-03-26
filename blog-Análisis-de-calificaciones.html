@@ -174,13 +174,136 @@
                 <span class="verde">SVR</span>
               </div>
               <p>
-                Una vez hecho esto ya podemos cargar los datos, los guardaremos en una variable llamada "data".
+                Una vez hecho esto ya podemos cargar los datos, los guardaremos en una variable llamada "data" (los
+                datos los puedes descargar en la sección "Material descargable" en la parte inferior de esta página,
+                simplemente da clic en el enlace).
               </p>
               <div class="highlight">
                 <span class="azul">data</span>
                 <span class="blanco">=</span>
                 <span class="verde">pd.read_csv</span>(<span class="n">'.../calificaciones-de-matematicas.csv'</span>)
               </div>
+              <p>
+                Echemos un vistazo rápido a los datos. Empezamos viendo los primeros 5 casos (filas).
+              </p>
+              <div class="highlight">
+                <span class="azul">data</span>.<span class="n">head</span>()
+              </div>
+              <p>
+                También revisemos las dimensiones de los datos (cuantas filas y columnas existen).
+              </p>
+              <div class="highlight">
+                <span class="azul">data</span>.<span class="azul">shape</span>
+              </div>
+              <p>
+                Como podrás ver en los resultados (si estás siguiendo el tutorial), existe información de 395
+                estudiantes dividida en 33 columnas. Encontremos los nombres de todas las variables (columnas) de
+                información.
+              </p>
+              <div class="highlight">
+                <span class="azul">data</span>.<span class="azul">columns</span>
+              </div>
+              <p>
+                Muy bien, ahora algo de información, existen 33 columnas, las cuales son:
+              </p>
+              <p>
+                <strong>•'school' o escuela:</strong> que es la escuela del estudiante, es una variable binaria que puede ser 'GP' (Gabriel Pereira) o 'MS' (Mousinho da Silveira).
+              </p>
+              <p>
+                <strong>•'sex' o sexo:</strong> es el sexo del estudiante, es una variable binaria que puede ser "F" (mujer) o "M" (hombre).
+              </p>
+              <p>
+                <strong>•'age' o edad:</strong> es la edad del estudiante, es una variable numérica con valores entre 15 y 22 años.
+              </p>
+              <p>
+                <strong>•'address' o dirección:</strong> es el tipo de domicilio del estudiante, es una variable binaria que puede ser "U" (urbano) o "R" (rural).
+              </p>
+              <p>
+                <strong>•'famsize' o tamaño de la familia:</strong> es una variable binaria que puede ser "LE3" (menos o igual a 3) o "GT3" (más de 3).
+              </p>
+              <p>
+                <strong>•'Pstatus' o estado de convivencia de los padres:</strong> es una variable binaria que puede ser "T" (convivencia) o "A" (separación).
+              </p>
+              <p>
+                <strong>•'Medu' o educación de la madre:</strong> es una variable numérica que puede ser 0 (ninguna),1 (educación primaria),2 (de 5º a 9º grado),3 (educación secundaria) y 4 (educación superior).
+              </p>
+              <p>
+                <strong>•'Fedu' o educación del padre:</strong> es una variable numérica que puede ser 0 (ninguna),1 (educación primaria),2 (de 5º a 9º grado),3 (educación secundaria) y 4 (educación superior).
+              </p>
+              <p>
+                <strong>•'Mjob' o trabajo de la madre:</strong> es una variable categorica que puede ser 'profesor', 'relacionado con la salud', 'servicios', 'en_casa' u 'otro'.
+              </p>
+              <p>
+                <strong>•'Fjob' o trabajo del padre:</strong> es una variable categorica que puede ser 'profesor', 'relacionado con la salud', 'servicios', 'en_casa' u 'otro'.
+              </p>
+              <p>
+                <strong>•'reason' o razón:</strong> razón para elegir este centro, es una variable categorica que puede ser 'casa' (cerca del hogar), 'reputación' (del centro), 'curso' (de preferencia) u 'otro'.
+              </p>
+              <p>
+                <strong>•'guardian' o tutor:</strong> tutor del alumno, es una variable categorica que puede ser "madre", "padre" u "otro").
+              </p>
+              <p>
+                <strong>•'traveltime' o tiempo de viaje de casa a la escuela:</strong> es una variable numérica que puede ser 1 (<15 min.), 2 (15 a 30 min.), 3 (de 30 min. a 1 hora), o 4 (>1 hora).
+              </p>
+              <p>
+                <strong>•'studytime' o tiempo de estudio:</strong> es el tiempo de estudio semanal, es una variable numérica que puede ser 1 (<2 horas), 2 (de 2 a 5 horas), 3 (de 5 a 10 horas), o 4 (>10 horas).
+              </p>
+              <p>
+                <strong>•'failures' o fracasos:</strong> número de fracasos de clase en el pasado, es una variable que puede estar entre 0 y 4.
+              </p>
+              <p>
+                <strong>•'schoolsup' o apoyo educativo adicional:</strong> es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'famsup' o apoyo educativo familiar:</strong> es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'paid' o clases extra pagadas:</strong> clases extra pagadas dentro de la asignatura del curso (matemáticas o portugués), es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'activities' o actividades:</strong> actividades extraescolares, es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'nursery' o guardería:</strong> asistió a la guardería, es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'higher' o superior:</strong> quiere cursar estudios superiores, es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'internet' o acceso a Internet:</strong> posee acceso a Internet en casa, es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'romantic' o romántico:</strong> tiene una relación romántica, es una variable binaria que puede ser "sí" o "no".
+              </p>
+              <p>
+                <strong>•'famrel' o relaciones familiares:</strong> calidad de las relaciones familiares, es una variable numérica entre 1 (muy malo) y 5 (excelente).
+              </p>
+              <p>
+                <strong>•'freetime' o tiempo libre:</strong> tiempo libre después de la escuela, es una variable numérica entre 1 (muy bajo) y 5 (muy alto).
+              </p>
+              <p>
+                <strong>•'goout' o salir:</strong> salir con amigos, es una variable numérica entre 1 (muy bajo) y 5 (muy alto).
+              <p>
+                <strong>•'Dalc' o alcohol entre semana:</strong> consumo de alcohol en el día de trabajo, es una variable numérica entre 1 (muy bajo) y 5 (muy alto).
+              </p>
+              <p>
+                <strong>•'Walc' o alcohol el fin de semana:</strong> consumo de alcohol en fin de semana, es una variable numérica entre 1 (muy bajo) y 5 (muy alto).
+              </p>
+              <p>
+                <strong>•'health' o salud:</strong> estado de salud actual, es una variable numérica entre 1 (muy bajo) y 5 (muy alto).
+              </p>
+              <p>
+                <strong>•'absences' o ausencias:</strong> número de ausencias escolares, es una variable numérica entre 0 y 93.
+              </p>
+              <p>
+                <strong>•'G1' o calificación 1:</strong> calificación del primer período, es una variable numérica entre 0 y 20.
+              </p>
+              <p>
+                <strong>•'G2' o calificación 2:</strong> calificación del segundo período, es una variable numérica entre 0 y 20.
+              </p>
+              <p>
+                <strong>•'G3' o calificación 3:</strong> calificación final, es una variable numérica entre 0 y 20.
+              </p>
             </div>
           </div>
           <div class="form-comments">
