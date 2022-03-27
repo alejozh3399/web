@@ -449,7 +449,43 @@
                 <span class="azul">axis</span> = <span class="n">1</span>, <span class="verde">inplace</span> =
                 <span class="azul">True</span>)
               </div>
-              <!--HASTA AQUI LLEGUE-->
+              <p>
+                Ahora se puede empezar la preparación de los datos para los algoritmos de aprendizaje, primero se va a
+                cambiar el nombre del conjunto de datos para que represente a todos los datos. A continuación, se van a
+                cambiar los valores de las variables categóricas por valores numéricos:
+              </p>
+              <div class="highlight">
+                <span class="azul">data_total</span> = <span class="azul">data</span>.<span class="n">copy</span>()
+                <br>
+                <span class="azul">categorical_d</span> = {<span class="n">'yes'</span>: <span class="verde">1</span>,
+                <span class="n">'no'</span>: <span class="verde">0</span>}
+                <br>
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'schoolsup'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'schoolsup'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'famsup'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'famsup'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'paid'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'paid'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'activities'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'activities'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'nursery'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'nursery'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'higher'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'higher'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'internet'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'internet'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'romantic'</span>] = <span class="azul">data_total</span>[
+                <span class="n">'romantic'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+              </div>
+              <!--Haora sí, hasta aquí llegue-->
             </div>
           </div>
 
