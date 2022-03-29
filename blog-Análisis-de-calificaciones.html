@@ -461,31 +461,283 @@
                 <span class="n">'no'</span>: <span class="verde">0</span>}
                 <br>
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'schoolsup'</span>] = <span class="azul">data_total</span>[
-                <span class="n">'schoolsup'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <span class="azul">data_total</span>[<span class="n">'schoolsup'</span>] = <span
+                  class="azul">data_total</span>[
+                <span class="n">'schoolsup'</span>].<span class="verde">map</span>(<span
+                  class="azul">categorical_d</span>)
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'famsup'</span>] = <span class="azul">data_total</span>[
+                <span class="azul">data_total</span>[<span class="n">'famsup'</span>] = <span
+                  class="azul">data_total</span>[
                 <span class="n">'famsup'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'paid'</span>] = <span class="azul">data_total</span>[
+                <span class="azul">data_total</span>[<span class="n">'paid'</span>] = <span
+                  class="azul">data_total</span>[
                 <span class="n">'paid'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'activities'</span>] = <span class="azul">data_total</span>[
-                <span class="n">'activities'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <span class="azul">data_total</span>[<span class="n">'activities'</span>] = <span
+                  class="azul">data_total</span>[
+                <span class="n">'activities'</span>].<span class="verde">map</span>(<span
+                  class="azul">categorical_d</span>)
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'nursery'</span>] = <span class="azul">data_total</span>[
-                <span class="n">'nursery'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <span class="azul">data_total</span>[<span class="n">'nursery'</span>] = <span
+                  class="azul">data_total</span>[
+                <span class="n">'nursery'</span>].<span class="verde">map</span>(<span
+                  class="azul">categorical_d</span>)
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'higher'</span>] = <span class="azul">data_total</span>[
+                <span class="azul">data_total</span>[<span class="n">'higher'</span>] = <span
+                  class="azul">data_total</span>[
                 <span class="n">'higher'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'internet'</span>] = <span class="azul">data_total</span>[
-                <span class="n">'internet'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <span class="azul">data_total</span>[<span class="n">'internet'</span>] = <span
+                  class="azul">data_total</span>[
+                <span class="n">'internet'</span>].<span class="verde">map</span>(<span
+                  class="azul">categorical_d</span>)
                 <br>
-                <span class="azul">data_total</span>[<span class="n">'romantic'</span>] = <span class="azul">data_total</span>[
-                <span class="n">'romantic'</span>].<span class="verde">map</span>(<span class="azul">categorical_d</span>)
+                <span class="azul">data_total</span>[<span class="n">'romantic'</span>] = <span
+                  class="azul">data_total</span>[
+                <span class="n">'romantic'</span>].<span class="verde">map</span>(<span
+                  class="azul">categorical_d</span>)
               </div>
-              <!--Haora sí, hasta aquí llegue-->
+              <p>
+                Esas fueron las variables binarias que se pudieron cambiar un 'yes' o 'no' por un 1 o 0. Ahora vamos a
+                cambiar las demás variables categóricas que tienen otros valores:
+              </p>
+              <div class="highlight">
+                <span class="azul">categorical_d</span> = {<span class="n">'F'</span>: <span class="verde">1</span>,
+                <span class="n">'M'</span>: <span class="verde">0</span>}
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'sex'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'sex'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+                <br>
+                <br>
+                <span class="azul">categorical_d</span> = {<span class="n">'U'</span>: <span class="verde">1</span>,
+                <span class="n">'R'</span>: <span class="verde">0</span>}
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'address'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'address'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+                <br>
+                <br>
+                <span class="azul">categorical_d</span> = {<span class="n">'LE3'</span>: <span class="verde">1</span>,
+                <span class="n">'GT3'</span>: <span class="verde">0</span>}
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'famsize'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'famsize'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+                <br>
+                <br>
+                <span class="azul">categorical_d</span> = {<span class="n">'T'</span>: <span class="verde">1</span>,
+                <span class="n">'A'</span>: <span class="verde">0</span>}
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'Pstatus'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'Pstatus'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+                <br>
+                <br>
+                <span class="azul">categorical_d</span> = {<span class="n">'teacher'</span>: <span
+                  class="verde">0</span>,
+                <span class="n">'health'</span>: <span class="verde">1</span>, <span class="n">'services'</span>: <span
+                  class="verde">2</span>,<span class="n">'at_home'</span>: <span class="verde">3</span>,
+                <span class="n">'other'</span>: <span class="verde">4</span>}
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'Mjob'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'Mjob'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'Fjob'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'Fjob'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+                <br>
+                <br>
+                <span class="azul">categorical_d</span> = {<span class="n">'home'</span>: <span class="verde">0</span>,
+                <span class="n">'reputation'</span>: <span class="verde">1</span>, <span class="n">'course'</span>:
+                <span class="verde">2</span>,<span class="n">'other'</span>: <span class="verde">3</span>}
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'reason'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'reason'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+                <br>
+                <br>
+                <span class="azul">categorical_d</span> = {<span class="n">'mother'</span>: <span
+                  class="verde">0</span>,
+                <span class="n">'father'</span>: <span class="verde">1</span>, <span class="n">'other'</span>: <span
+                  class="verde">2</span>}
+                <br>
+                <span class="azul">data_total</span>[<span class="n">'guardian'</span>] = <span
+                  class="azul">data_total</span>[<span class="n">'guardian'</span>].<span class="n">map</span>(
+                <span class="azul">categorical_d</span>)
+              </div>
+              <p>
+                Ahora podemos crear los conjuntos de datos y objetivos (X, y) para entrenar el modelo:
+              </p>
+              <div class="highlight">
+                <span class="azul">X</span> = <span class="azul">data_total</span>.<span class="n">drop</span>(
+                <span class="azul">'G3'</span>, <span class="n">axis</span>=<span class="verde">1</span>)
+                <br>
+                <span class="azul">y</span> = <span class="azul">data_total</span>[<span class="azul">'G3'</span>]
+              </div>
+              <p>
+                De igual forma vamos a generar los conjuntos de entrenamiento y de pruebas:
+              </p>
+              <div class="highlight">
+                <span class="azul">X_train</span>, <span class="azul">X_test</span>, <span class="azul">y_train</span>,
+                <span class="azul">y_test</span> = <span class="azul">train_test_split</span>(<span
+                  class="azul">X</span>,
+                <span class="azul">y</span>, <span class="n">test_size</span>=<span class="verde">0.2</span>,
+                <span class="n">random_state</span>=<span class="verde">0</span>)
+              </div>
+              <p>
+                Ahora vamos a definir los modelos:
+              </p>
+              <div class="highlight">
+                <span class="azul">svm_model</span> = <span class="verde">SVR</span>()
+                <br>
+                <span class="azul">rf_model</span> = <span class="verde">RandomForestRegressor</span>(<span
+                  class="azul">n_estimators</span> = <span class="n">150</span>)
+              </div>
+              <p>
+                Y ahora vamos a entrenarlos:
+              </p>
+              <div class="highlight">
+                <span class="azul">svm_model</span>.<span class="n">fit</span>(<span class="azul">X_train</span>,
+                <span class="azul">y_train</span>)
+                <br>
+                <span class="azul">rf_model</span>.<span class="n">fit</span>(<span class="azul">X_train</span>,
+                <span class="azul">y_train</span>)
+              </div>
+              <p>
+                Ahora vamos a predecir:
+              </p>
+              <div class="highlight">
+                <span class="azul">pred_svm</span> = <span class="azul">svm_model</span>.<span class="n">predict</span>(
+                <span class="azul">X_test</span>)
+                <br>
+                <span class="azul">pred_rf</span> = <span class="azul">rf_model</span>.<span class="n">predict</span>(
+                <span class="azul">X_test</span>)
+              </div>
+              <p>
+                Y ahora vamos a medir los resultados:
+              </p>
+              <div class="highlight">
+                <span class="azul">score_svm_mse</span> = <span class="n">mean_squared_error</span>(<span
+                  class="azul">y_test</span>,
+                <span class="azul">pred_svm</span>)
+                <br>
+                <span class="azul">score_rf_mse</span> = <span class="n">mean_squared_error</span>(<span
+                  class="azul">y_test</span>, <span class="azul">pred_rf</span>)
+                <br>
+                <br>
+                <span class="azul">score_svm_mae</span> = <span class="n">mean_absolute_error</span>(<span
+                  class="azul">y_test</span>,
+                <span class="azul">pred_svm</span>)
+                <br>
+                <span class="azul">score_rf_mae</span> = <span class="n">mean_absolute_error</span>(<span
+                  class="azul">y_test</span>, <span class="azul">pred_rf</span>)
+              </div>
+              <p>
+                Y ahora vamos a comparar los resultados:
+              </p>
+              <div class="highlight">
+                <span class="n">print</span>(<span class="azul">score_svm_mse</span>)
+                <br>
+                <span class="n">print</span>(<span class="azul">score_rf_mse</span>)
+                <br>
+                <span class="n">print</span>(<span class="azul">score_svm_mae</span>)
+                <br>
+                <span class="n">print</span>(<span class="azul">score_rf_mae</span>)
+              </div>
+              <p>
+                Esos fueron los modelos de aprendizaje automático, sin embargo, existe una forma un poco más profunda de
+                generar las predicciones. Vamos a realizar una red neuronal para este análisis:
+              </p>
+              <div class="highlight">
+                <span class="azul">nn_model</span> = <span class="azul">keras</span>.<span class="n">Sequential</span>([
+                <br>
+                <span class="n">layers</span>.<span class="n">Dense</span>(<span class="n">64</span>, <span
+                  class="n">activation</span>=<span class="azul">'relu'</span>),
+                <br>
+                <span class="n">layers</span>.<span class="n">Dense</span>(<span class="n">64</span>, <span
+                  class="n">activation</span>=<span class="azul">'relu'</span>),
+                <br>
+                <span class="n">layers</span>.<span class="n">Dense</span>(<span class="n">1</span>)
+                <br>
+                ])
+              </div>
+              <p>
+                Vamos a compilar este modelo con un optimizador y una función de pérdida:
+              </p>
+              <div class="highlight">
+                <span class="azul">nn_model</span>.<span class="n">compile</span>(<span
+                  class="azul">optimizer</span>=<span class="n">'rmsprop'</span>,
+                <span class="azul">loss</span>=<span class="n">'mse'</span>, <span class="azul">metrics</span>=[
+                <span class="n">'mae'</span>])
+              </div>
+              <p>
+                Y ahora vamos a entrenarlo:
+              </p>
+              <div class="highlight">
+                <span class="azul">history</span> =
+                <span class="azul">nn_model</span>.<span class="n">fit</span>(<span class="azul">X_train</span>,
+                <span class="azul">y_train</span>, <span class="azul">epochs</span>=<span class="n">100</span>,
+                <span class="azul">validation_split</span>=<span class="n">0.2</span>)
+              </div>
+              <p>
+                Vamos a ver los resultados en un gráfico:
+              </p>
+              <div class="highlight">
+                <span class="azul">plt</span>.<span class="n">plot</span>(<span class="azul">history</span>.<span
+                  class="n">history</span>[<span class="azul">'mae'</span>])
+                <br>
+                <span class="azul">plt</span>.<span class="n">plot</span>(<span class="azul">history</span>.<span
+                  class="n">history</span>[<span class="azul">'val_mae'</span>])
+                <br>
+                <span class="azul">plt</span>.<span class="n">title</span>(<span class="azul">'model mae'</span>)
+                <br>
+                <span class="azul">plt</span>.<span class="n">ylabel</span>(<span class="azul">'mae'</span>)
+                <br>
+                <span class="azul">plt</span>.<span class="n">xlabel</span>(<span class="azul">'epoch'</span>)
+                <br>
+                <span class="azul">plt</span>.<span class="n">legend</span>(<span class="azul">['train', 'test'],
+                  <span class="azul">loc</span>=<span class="azul">'upper left'</span>)
+                  <br>
+                  <span class="azul">plt</span>.<span class="n">show</span>()
+              </div>
+              <p>
+                Y ahora vamos a predecir:
+              </p>
+              <div class="highlight">
+                <span class="azul">pred_nn</span> = <span class="azul">nn_model</span>.<span
+                  class="n">predict</span>(<span class="azul">X_test</span>)
+              </div>
+              <p>
+                Revisemos los resultados:
+              </p>
+              <div class="highlight">
+                <span class="azul">score_nn_mae</span> = <span class="n">mean_absolute_error</span>(<span
+                  class="azul">y_test</span>, <span class="azul">pred_nn</span>)
+                <br>
+                <span class="azul">score_nn_mse</span> = <span class="n">mean_squared_error</span>(<span
+                  class="azul">y_test</span>, <span class="azul">pred_nn</span>)
+              </div>
+              <p>
+                Y ahora vamos a imprimir los resultados:
+              </p>
+              <div class="highlight">
+                <span class="n">print</span>(<span class="azul">score_nn_mae</span>)
+                <br>
+                <span class="n">print</span>(<span class="azul">score_nn_mse</span>)
+              </div>
+              <p>
+                Si lo has hecho bien, verás que el mejor modelo (menor error absoluto) es el de Random Forest, por esta
+                razón puede ser útil revisar modelos basados en árboles (si se quiere reducir más el error) como el caso
+                del XGboost.
+              </p>
+              <p>
+                Por lo pronto, hasta aquí llega este tutorial. Si deseas ver los resultados del código y comparar tus
+                resultados, busca el enlace más abajo. Para entender lo que hemos realizado te sugiero el curso de
+                aprendizaje profundo. ¡Suerte!
+              </p>
             </div>
           </div>
 
@@ -500,6 +752,12 @@
             <div class="more-info">
               <li>
                 <a href="material-tutoriales\calificaciones-de-matematicas.csv">Datos para el análisis</a>
+              </li>
+              <li>
+                <a href="material-tutoriales\post1.ipynb">Código ejemplo</a>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1ryJbsa6KgnwhVdZpczJgWQoIikjneiKW/view?usp=sharing">Código ejemplo (en línea - colab)</a>
               </li>
             </div>
           </div>
