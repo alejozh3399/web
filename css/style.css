@@ -41,6 +41,12 @@ body {
 }
 /*--/ codigo /--*/
 
+.btn {
+  background-color: #192736;
+  border-color: #192736;
+  color: #ffffff;
+}
+
 h1,
 h2,
 h3,
