@@ -649,7 +649,7 @@ a:hover {
 }
 
 .intro .overlay-itro {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 106, 236, 0.6);
   position: absolute;
   top: 0;
   left: 0px;
@@ -903,7 +903,7 @@ a:hover {
 //--//-->   BLOG
 ======================================*/
 .card-blog .card-footer{
-  background: rgb(24, 24, 24);
+  background: rgb(29, 44, 70);
   color: #242424;
 }
 
