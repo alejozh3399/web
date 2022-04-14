@@ -96,13 +96,13 @@
                     </h3>
                     <div class="line-mf"></div>
                   </div>
-                  <p class = 'lead'>
+                  <p class='lead'>
                     Según la información proporcionada por
                     <a
                       href="https://www.kaggle.com/competitions/tabular-playground-series-apr-2022/overview/description">
                       kaggle:</a>
                   </p>
-                  <p align='center' class = 'lead'>
+                  <p align='center' class='lead'>
                     "Bienvenido a la edición de abril de la serie 2022
                     Tabular Playground. El reto de este mes es un problema de clasificación de series temporales.
                     Se te han proporcionado miles de secuencias de sesenta segundos de datos de sensores biológicos
@@ -110,9 +110,10 @@
                     posibles estados de actividad. ¿Puedes determinar en qué estado se encontraba un participante a
                     partir de los datos de los sensores?"
                   </p>
-                  <p class = 'lead'>
+                  <p class='lead'>
                     Como se puede entender, este reto es una clasificación binaria. Se utilizó el modelo Light GBM y un
-                    modelo neuronal profundo (Dnn).
+                    modelo neuronal profundo (DNN). Se usó la predicción de estos modelos para alimentar una regresión
+                    logística que fue el modelo final.
                   </p>
                 </div>
               </div>
@@ -130,17 +131,12 @@
                           <img
                             src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg"
                             alt="pandas" width="40" height="40" /> </a>
-                        <a href="https://lightgbm.readthedocs.io/en/latest/" target="_blank"
-                          rel="noreferrer"> <img src="https://unblockerai.s3-us-west-2.amazonaws.com/ubnpublic/a581b68f-6795-4224-b8a9-b7bb340c7144-tech-logo-lightgbm.png"
+                        <a href="https://lightgbm.readthedocs.io/en/latest/" target="_blank" rel="noreferrer"> <img
+                            src="https://unblockerai.s3-us-west-2.amazonaws.com/ubnpublic/a581b68f-6795-4224-b8a9-b7bb340c7144-tech-logo-lightgbm.png"
                             alt="pytorch" width="40" height="40" /> </a>
-                        <a href="https://scikit-learn.org/"
-                          target="_blank" rel="noreferrer"> <img
+                        <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img
                             src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
-                            alt="scikit_learn" width="40" height="40" /> </a> 
-                        <a href="https://seaborn.pydata.org/"
-                          target="_blank" rel="noreferrer"> <img
-                            src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40"
-                            height="40" /> </a> 
+                            alt="scikit_learn" width="40" height="40" /> </a>
                         <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer">
                           <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow"
                             width="40" height="40" />
@@ -152,24 +148,24 @@
                 <br>
                 <div class="skill-mf">
                   <p class="title-s">Evaluación del modelo</p>
-                  <span>MSE</span> <span class="pull-right">80%</span>
+                  <span>Jaccard score:</span> <span class="pull-right">87%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                    <div class="progress-bar" role="progressbar" style="width: 87%;" aria-valuenow="87"
                       aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <span>RMSE</span> <span class="pull-right">75%</span>
+                  <span>F1 score:</span> <span class="pull-right">93%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                    <div class="progress-bar" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
-                  <span>MAE</span> <span class="pull-right">40%</span>
+                  <span>Precision score</span> <span class="pull-right">92%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                    <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
-                  <span>R-squared</span> <span class="pull-right">90%</span>
+                  <span>Final score (kaggle):</span> <span class="pull-right">84%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                    <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
                 </div>
@@ -194,6 +190,9 @@
                   </p>
                 </div>
               </div>
+              <div class="card-img">
+                <a><img src="img\proyecto1_resultado.jpg" alt="" class="img-fluid"></a>
+              </div>
             </div>
             <br>
             <div class=" col-sm-12">
@@ -204,10 +203,10 @@
                   </h5>
                 </div>
                 <li>
-                  <a href="img\Titulo-1805203013.pdf">Codigo en linea (colab)</a>
+                  <a href="https://colab.research.google.com/drive/1R1BC8wCD_Jr8ahdz9CxctYUxzQS0KvL4?usp=sharing">Codigo en linea (colab)</a>
                 </li>
                 <li>
-                  <a href="https://www.coursera.org/account/accomplishments/certificate/35KYC8KE8EEQ">Github</a>
+                  <a href="https://github.com/crisdavid3335/analytics_with_KERAS/blob/24b5598fe8f570993e5df14ce8ee16ae777ef85d/Tabular_Playground_Series.ipynb">Github</a>
                 </li>
               </div>
             </div>
