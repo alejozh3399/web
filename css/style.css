@@ -836,7 +836,11 @@ a:hover {
 }
 
 .work-content .w-more .w-ctegory {
-  color: #ffbb00;
+  color: #c8ff00;
+}
+
+.work-content .w-more .w-tech {
+  color: #00ffb7;
 }
 
 .work-content .w-like {

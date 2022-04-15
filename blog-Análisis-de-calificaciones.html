@@ -106,12 +106,12 @@
               </ul>
             </div>
             <div class="article-content">
-              <p>
+              <p align = 'justify'>
                 En este post vamos a realizar un ejercicio de análisis completo. Para empezar asegúrate de tener una
                 consola con python 3, un IDE, un notebook de google colab o tu editor de código favorito listo con las
                 siguientes librerías: Pandas, Numpy, Matplotlib, Seaborn, Sklearn, Keras y Tensorflow2.
               </p>
-              <p>Primero cargamos las librerías:</p>
+              <p align = 'justify'>Primero cargamos las librerías:</p>
               <div class="highlight">
                 <span class="rosa">import</span>
                 <span class="verde">pandas</span>
@@ -168,7 +168,7 @@
                 <span class="rosa">import</span>
                 <span class="verde">SVR</span>
               </div>
-              <p>
+              <p align = 'justify'>
                 Una vez hecho esto ya podemos cargar los datos, los guardaremos en una variable llamada "data" (los
                 datos los puedes descargar en la sección "Material descargable" en la parte inferior de esta página,
                 simplemente da clic en el enlace).
@@ -178,19 +178,19 @@
                 <span class="blanco">=</span>
                 <span class="verde">pd.read_csv</span>(<span class="n">'.../calificaciones-de-matematicas.csv'</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Echemos un vistazo rápido a los datos. Empezamos viendo los primeros 5 casos (filas).
               </p>
               <div class="highlight">
                 <span class="azul">data</span>.<span class="n">head</span>()
               </div>
-              <p>
+              <p align = 'justify'>
                 También revisemos las dimensiones de los datos (cuantas filas y columnas existen).
               </p>
               <div class="highlight">
                 <span class="azul">data</span>.<span class="azul">shape</span>
               </div>
-              <p>
+              <p align = 'justify'>
                 Como podrás ver en los resultados (si estás siguiendo el tutorial), existe información de 395
                 estudiantes dividida en 33 columnas. Encontremos los nombres de todas las variables (columnas) de
                 información.
@@ -198,151 +198,151 @@
               <div class="highlight">
                 <span class="azul">data</span>.<span class="azul">columns</span>
               </div>
-              <p>
+              <p align = 'justify'>
                 Muy bien, ahora algo de información, existen 33 columnas, las cuales son:
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'school' o escuela:</strong> que es la escuela del estudiante, es una variable binaria que
                 puede ser 'GP' (Gabriel Pereira) o 'MS' (Mousinho da Silveira).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'sex' o sexo:</strong> es el sexo del estudiante, es una variable binaria que puede ser "F"
                 (mujer) o "M" (hombre).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'age' o edad:</strong> es la edad del estudiante, es una variable numérica con valores entre 15
                 y 22 años.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'address' o dirección:</strong> es el tipo de domicilio del estudiante, es una variable binaria
                 que puede ser "U" (urbano) o "R" (rural).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'famsize' o tamaño de la familia:</strong> es una variable binaria que puede ser "LE3" (menos o
                 igual a 3) o "GT3" (más de 3).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'Pstatus' o estado de convivencia de los padres:</strong> es una variable binaria que puede ser
                 "T" (convivencia) o "A" (separación).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'Medu' o educación de la madre:</strong> es una variable numérica que puede ser 0 (ninguna),1
                 (educación primaria),2 (de 5º a 9º grado),3 (educación secundaria) y 4 (educación superior).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'Fedu' o educación del padre:</strong> es una variable numérica que puede ser 0 (ninguna),1
                 (educación primaria),2 (de 5º a 9º grado),3 (educación secundaria) y 4 (educación superior).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'Mjob' o trabajo de la madre:</strong> es una variable categorica que puede ser 'profesor',
                 'relacionado con la salud', 'servicios', 'en_casa' u 'otro'.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'Fjob' o trabajo del padre:</strong> es una variable categorica que puede ser 'profesor',
                 'relacionado con la salud', 'servicios', 'en_casa' u 'otro'.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'reason' o razón:</strong> razón para elegir este centro, es una variable categorica que puede
                 ser 'casa' (cerca del hogar), 'reputación' (del centro), 'curso' (de preferencia) u 'otro'.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'guardian' o tutor:</strong> tutor del alumno, es una variable categorica que puede ser
                 "madre", "padre" u "otro").
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'traveltime' o tiempo de viaje de casa a la escuela:</strong> es una variable numérica que
                 puede ser 1 (<15 min.), 2 (15 a 30 min.), 3 (de 30 min. a 1 hora), o 4 (>1 hora).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'studytime' o tiempo de estudio:</strong> es el tiempo de estudio semanal, es una variable
                 numérica que puede ser 1 (<2 horas), 2 (de 2 a 5 horas), 3 (de 5 a 10 horas), o 4 (>10 horas).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'failures' o fracasos:</strong> número de fracasos de clase en el pasado, es una variable que
                 puede estar entre 0 y 4.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'schoolsup' o apoyo educativo adicional:</strong> es una variable binaria que puede ser "sí" o
                 "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'famsup' o apoyo educativo familiar:</strong> es una variable binaria que puede ser "sí" o
                 "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'paid' o clases extra pagadas:</strong> clases extra pagadas dentro de la asignatura del curso
                 (matemáticas o portugués), es una variable binaria que puede ser "sí" o "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'activities' o actividades:</strong> actividades extraescolares, es una variable binaria que
                 puede ser "sí" o "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'nursery' o guardería:</strong> asistió a la guardería, es una variable binaria que puede ser
                 "sí" o "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'higher' o superior:</strong> quiere cursar estudios superiores, es una variable binaria que
                 puede ser "sí" o "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'internet' o acceso a Internet:</strong> posee acceso a Internet en casa, es una variable
                 binaria que puede ser "sí" o "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'romantic' o romántico:</strong> tiene una relación romántica, es una variable binaria que
                 puede ser "sí" o "no".
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'famrel' o relaciones familiares:</strong> calidad de las relaciones familiares, es una
                 variable numérica entre 1 (muy malo) y 5 (excelente).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'freetime' o tiempo libre:</strong> tiempo libre después de la escuela, es una variable
                 numérica entre 1 (muy bajo) y 5 (muy alto).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'goout' o salir:</strong> salir con amigos, es una variable numérica entre 1 (muy bajo) y 5
                 (muy alto).
-              <p>
+              <p align = 'justify'>
                 <strong>•'Dalc' o alcohol entre semana:</strong> consumo de alcohol en el día de trabajo, es una
                 variable numérica entre 1 (muy bajo) y 5 (muy alto).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'Walc' o alcohol el fin de semana:</strong> consumo de alcohol en fin de semana, es una
                 variable numérica entre 1 (muy bajo) y 5 (muy alto).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'health' o salud:</strong> estado de salud actual, es una variable numérica entre 1 (muy bajo)
                 y 5 (muy alto).
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'absences' o ausencias:</strong> número de ausencias escolares, es una variable numérica entre
                 0 y 93.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'G1' o calificación 1:</strong> calificación del primer período, es una variable numérica entre
                 0 y 20.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'G2' o calificación 2:</strong> calificación del segundo período, es una variable numérica
                 entre 0 y 20.
               </p>
-              <p>
+              <p align = 'justify'>
                 <strong>•'G3' o calificación 3:</strong> calificación final, es una variable numérica entre 0 y 20.
               </p>
-              <p>
+              <p align = 'justify'>
                 Una vez teniendo esto en cuenta vamos a empezar el análisis. Nuestro objetivo es predecir la
                 calificación final (G3) de los alumnos, por ello se empezará analizando esa variable:
               </p>
               <div class="highlight">
                 <span class="azul">data</span>[<span class="n">'G3'</span>].<span class="n">describe</span>()
               </div>
-              <p>
+              <p align = 'justify'>
                 Existen 395 calificaciones finales, el promedio de calificaciones finales es 10.42 con una desviación
                 estándar de 4.6, la calificación más baja es 0.
               </p>
-              <p>
+              <p align = 'justify'>
                 Grafiquemos la variable calificación final (G3) con un histograma:
               </p>
               <div class="highlight">
@@ -367,19 +367,19 @@
                 <img src="img/tutorial1_1.png""
                   alt=" histograma" width="100%">
               </div>
-              <p>
+              <p align = 'justify'>
                 En este histograma podemos observar que la calificación final es una variable continua, por lo que
                 podemos hacer una regresión lineal. Sin embargo, vamos a usar algoritmos más avanzado para predecir en
                 este caso. Utilizaremos un modelo de máquinas de soporte de vectores de regresión o SVR, un modelo de
                 árboles como el Random Forest para regresión y para finalizar, una red neuronal para regresión.
               </p>
-              <p>
+              <p align = 'justify'>
                 Primero revisemos que no existan valores nulos en las variables:
               </p>
               <div class="highlight">
                 <span class="azul">data</span>.<span class="n">isnull</span>().<span class="n">any</span>()
               </div>
-              <p>
+              <p align = 'justify'>
                 No hay valores nulos, por lo que podemos continuar con el análisis. Vamos a Separar a los estudiantes
                 por sexo:
               </p>
@@ -390,7 +390,7 @@
                 <span class="azul">students_f</span> = <span class="n">len</span>(<span class="azul">data</span>[<span
                   class="azul">data</span>[<span class="n">'sex'</span>] == <span class="n">'F'</span>])
               </div>
-              <p>
+              <p align = 'justify'>
                 Ahora vamos a hacer un gráfico de los estudiantes por sexo y por edad, para ver su distribución:
               </p>
               <div class="highlight">
@@ -421,7 +421,7 @@
                 <img src="img/tutorial1_2.png""
                   alt=" histograma" width="100%">
               </div>
-              <p>
+              <p align = 'justify'>
                 En este gráfico podemos observar que hay una distribución muy similar entre las mujeres y las
                 hombres. Sin embargo, hay una distribución más dispersa en la edad de los estudiantes. Para observar
                 mejor como se relacionan las variables, revisemos las correlaciones de las variables numéricas con la
@@ -432,7 +432,7 @@
                   class="verde">sort_values</span>(<span class="azul">ascending</span> = <span
                   class="azul">False</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Aquí podemos ver que las variables que más correlacionan con la calificación final son las
                 calificaciones anteriores de los estudiantes. Las siguientes variables por correlación son los
                 fracasos escolares anteriores y luego variables de educación de los padres (madre y padre). Vamos a
@@ -444,7 +444,7 @@
                 <span class="azul">axis</span> = <span class="n">1</span>, <span class="verde">inplace</span> =
                 <span class="azul">True</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Ahora se puede empezar la preparación de los datos para los algoritmos de aprendizaje, primero se va a
                 cambiar el nombre del conjunto de datos para que represente a todos los datos. A continuación, se van a
                 cambiar los valores de las variables categóricas por valores numéricos:
@@ -493,7 +493,7 @@
                 <span class="n">'romantic'</span>].<span class="verde">map</span>(<span
                   class="azul">categorical_d</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Esas fueron las variables binarias que se pudieron cambiar un 'yes' o 'no' por un 1 o 0. Ahora vamos a
                 cambiar las demás variables categóricas que tienen otros valores:
               </p>
@@ -563,7 +563,7 @@
                   class="azul">data_total</span>[<span class="n">'guardian'</span>].<span class="n">map</span>(
                 <span class="azul">categorical_d</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Ahora podemos crear los conjuntos de datos y objetivos (X, y) para entrenar el modelo:
               </p>
               <div class="highlight">
@@ -572,7 +572,7 @@
                 <br>
                 <span class="azul">y</span> = <span class="azul">data_total</span>[<span class="azul">'G3'</span>]
               </div>
-              <p>
+              <p align = 'justify'>
                 De igual forma vamos a generar los conjuntos de entrenamiento y de pruebas:
               </p>
               <div class="highlight">
@@ -582,7 +582,7 @@
                 <span class="azul">y</span>, <span class="n">test_size</span>=<span class="verde">0.2</span>,
                 <span class="n">random_state</span>=<span class="verde">0</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Ahora vamos a definir los modelos:
               </p>
               <div class="highlight">
@@ -591,7 +591,7 @@
                 <span class="azul">rf_model</span> = <span class="verde">RandomForestRegressor</span>(<span
                   class="azul">n_estimators</span> = <span class="n">150</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Y ahora vamos a entrenarlos:
               </p>
               <div class="highlight">
@@ -601,7 +601,7 @@
                 <span class="azul">rf_model</span>.<span class="n">fit</span>(<span class="azul">X_train</span>,
                 <span class="azul">y_train</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Ahora vamos a predecir:
               </p>
               <div class="highlight">
@@ -611,7 +611,7 @@
                 <span class="azul">pred_rf</span> = <span class="azul">rf_model</span>.<span class="n">predict</span>(
                 <span class="azul">X_test</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Y ahora vamos a medir los resultados:
               </p>
               <div class="highlight">
@@ -630,7 +630,7 @@
                 <span class="azul">score_rf_mae</span> = <span class="n">mean_absolute_error</span>(<span
                   class="azul">y_test</span>, <span class="azul">pred_rf</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Y ahora vamos a comparar los resultados:
               </p>
               <div class="highlight">
@@ -642,7 +642,7 @@
                 <br>
                 <span class="n">print</span>(<span class="azul">score_rf_mae</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Esos fueron los modelos de aprendizaje automático, sin embargo, existe una forma un poco más profunda de
                 generar las predicciones. Vamos a realizar una red neuronal para este análisis:
               </p>
@@ -659,7 +659,7 @@
                 <br>
                 ])
               </div>
-              <p>
+              <p align = 'justify'>
                 Vamos a compilar este modelo con un optimizador y una función de pérdida:
               </p>
               <div class="highlight">
@@ -668,7 +668,7 @@
                 <span class="azul">loss</span>=<span class="n">'mse'</span>, <span class="azul">metrics</span>=[
                 <span class="n">'mae'</span>])
               </div>
-              <p>
+              <p align = 'justify'>
                 Y ahora vamos a entrenarlo:
               </p>
               <div class="highlight">
@@ -677,7 +677,7 @@
                 <span class="azul">y_train</span>, <span class="azul">epochs</span>=<span class="n">100</span>,
                 <span class="azul">validation_split</span>=<span class="n">0.2</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Vamos a ver los resultados en un gráfico:
               </p>
               <div class="highlight">
@@ -698,14 +698,14 @@
                   <br>
                   <span class="azul">plt</span>.<span class="n">show</span>()
               </div>
-              <p>
+              <p align = 'justify'>
                 Y ahora vamos a predecir:
               </p>
               <div class="highlight">
                 <span class="azul">pred_nn</span> = <span class="azul">nn_model</span>.<span
                   class="n">predict</span>(<span class="azul">X_test</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Revisemos los resultados:
               </p>
               <div class="highlight">
@@ -715,7 +715,7 @@
                 <span class="azul">score_nn_mse</span> = <span class="n">mean_squared_error</span>(<span
                   class="azul">y_test</span>, <span class="azul">pred_nn</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Y ahora vamos a imprimir los resultados:
               </p>
               <div class="highlight">
@@ -723,12 +723,12 @@
                 <br>
                 <span class="n">print</span>(<span class="azul">score_nn_mse</span>)
               </div>
-              <p>
+              <p align = 'justify'>
                 Si lo has hecho bien, verás que el mejor modelo (menor error absoluto) es el de Random Forest, por esta
                 razón puede ser útil revisar modelos basados en árboles (si se quiere reducir más el error) como el caso
                 del XGboost.
               </p>
-              <p>
+              <p align = 'justify'>
                 Por lo pronto, hasta aquí llega este tutorial. Si deseas ver los resultados del código y comparar tus
                 resultados, busca el enlace más abajo. Para entender lo que hemos realizado te sugiero el curso de
                 aprendizaje profundo. ¡Suerte!
@@ -767,10 +767,10 @@
             <div class="sidebar-content">
               <ul class="list-sidebar">
                 <li>
-                  <a href="blog-single.html#blog">¿Qué es el aprendizaje profundo?<p>(Lectura 1)</p></a>
+                  <a href="blog-single.html#blog">¿Qué es el aprendizaje profundo?<p align = 'justify'>(Lectura 1)</p></a>
                 </li>
                 <li>
-                  <a href="blog-single2.html#blog">Una breve historia del aprendizaje automático<p>(Lectura 2)</p></a>
+                  <a href="blog-single2.html#blog">Una breve historia del aprendizaje automático<p align = 'justify'>(Lectura 2)</p></a>
                 </li>
               </ul>
             </div>
