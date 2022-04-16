@@ -96,27 +96,34 @@
                     </h3>
                     <div class="line-mf"></div>
                   </div>
-                  <p align = 'justify'>
+                  <p align='justify'>
                     Para ver la competición de kaggle de
-                    <a href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting">clic aquí.</a>
+                    <a href="https://www.kaggle.com/competitions/spaceship-titanic">clic aquí.</a>
                   </p>
-                  <p class='lead' align = 'justify'>
-                    Las previsiones no son sólo para los meteorólogos. Los gobiernos prevén el crecimiento económico.
-                    Los científicos intentan predecir la población futura. Y las empresas prevén la demanda de
-                    productos, una tarea habitual de los científicos de datos profesionales. Las previsiones son
-                    especialmente importantes para las tiendas de comestibles, que deben decidir con delicadeza cuánto
-                    inventario comprar. Si se predice un poco por encima, las tiendas de comestibles se quedan con un
-                    exceso de existencias de productos perecederos. Si adivinan un poco menos, los artículos más
-                    populares se agotan rápidamente, lo que supone una pérdida de ingresos y un disgusto para los
-                    clientes. Unas previsiones más precisas, gracias al aprendizaje automático, podrían ayudar a los
-                    minoristas a complacer a los clientes teniendo la cantidad justa de productos en el momento
-                    adecuado.
+                  <p class='lead' align='justify'>
+                    Bienvenido al año 2912, en el que se necesitan tus conocimientos de ciencia de datos para resolver
+                    un misterio cósmico. Hemos recibido una transmisión desde cuatro años luz de distancia y las cosas
+                    no pintan bien.
                   </p>
-                  <p class='lead' align = 'justify'>
-                    Los actuales métodos subjetivos de previsión para el comercio minorista tienen pocos datos que los
-                    respalden y es poco probable que se puedan automatizar. El problema se vuelve aún más complejo a
-                    medida que los minoristas añaden nuevas ubicaciones con necesidades únicas, nuevos productos, gustos
-                    estacionales en constante cambio y una comercialización de productos impredecible.
+                  <p class='lead' align='justify'>
+                    La nave espacial Titanic era un transatlántico interestelar de pasajeros lanzado hace un mes. Con
+                    casi 13.000 pasajeros a bordo, la nave partió en su viaje inaugural transportando emigrantes de
+                    nuestro sistema solar a tres exoplanetas recientemente habitables que orbitan alrededor de estrellas
+                    cercanas.
+                  </p>
+                  <p class='lead' align='justify'>
+                    Mientras rodeaba Alfa Centauri de camino a su primer destino, el tórrido 55 Cancri E, la incauta
+                    nave espacial Titanic colisionó con una anomalía del espacio-tiempo oculta en una nube de polvo.
+                    Desgraciadamente, tuvo un destino similar al de su homónima de 1000 años antes. Aunque la nave
+                    permaneció intacta, casi la mitad de los pasajeros fueron transportados a una dimensión alternativa.
+                  </p>
+                  <p class='lead' align='justify'>
+                    Para ayudar a las tripulaciones de rescate y recuperar a los pasajeros perdidos, se te desafía a
+                    predecir qué pasajeros fueron transportados por la anomalía utilizando los registros recuperados del
+                    sistema informático dañado de la nave espacial.
+                  </p>
+                  <p class='lead' align='justify'>
+                    ¡Ayuda a salvarlos y a cambiar la historia!
                   </p>
                 </div>
               </div>
@@ -129,7 +136,7 @@
                           Tecnologías
                         </h5>
                       </div>
-                      <p align = 'justify'>
+                      <p align='justify'>
                         <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
                           <img
                             src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg"
@@ -140,9 +147,9 @@
                         <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img
                             src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
                             alt="scikit_learn" width="40" height="40" /> </a>
-                        <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer">
-                          <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow"
-                            width="40" height="40" />
+                        <a href="https://lightgbm.readthedocs.io/en/latest/" target="_blank" rel="noreferrer"> <img
+                            src="https://unblockerai.s3-us-west-2.amazonaws.com/ubnpublic/a581b68f-6795-4224-b8a9-b7bb340c7144-tech-logo-lightgbm.png"
+                            alt="pytorch" width="40" height="40" /> </a>
                         </a>
                       </p>
                     </div>
@@ -180,25 +187,29 @@
                       Descripción del proyecto
                     </h5>
                   </div>
-                  <p align = 'justify'>
-                    Objetivo de la competición
-                    <br>
-                    En este concurso de "iniciación", utilizarás la previsión de series temporales para pronosticar las
-                    ventas de las tiendas a partir de los datos de Corporación Favorita, un gran minorista de
-                    comestibles con sede en Ecuador.
+                  <p align='justify'>
+                    El proyecto consiste en una aplicación de aprendizaje automático para predecir qué pasajeros serán
+                    transportados por la anomalía en la nave espacial Titanic.
                   </p>
-                  <p align = 'justify'>
-                    En concreto, se construira un modelo que prediga con mayor precisión las ventas por unidad de miles de
-                    artículos vendidos en diferentes tiendas Favorita. Practicará sus habilidades de aprendizaje
-                    automático con un conjunto de datos de entrenamiento accesible con información de fechas, tiendas y
-                    artículos, promociones y ventas unitarias.
+                  <p align='justify'>
+                    El modelo construido es un conjunto de tres modelos; una red neuronal de cinco capas (dos capas de
+                    256 neuronas, una de 128 neuronas, una capa de salida y una capa de desconexión), un modelo de
+                    clasificación Xgboost y un modelo de clasificación lightgbm. Estos tres modelos alimentan a su vez
+                    un modelo de bosque aleatorio que arroja las predicciones finales.
                   </p>
                 </div>
               </div>
-              <div class="card-img">
+              <br>
+              <div class="title-box-2">
+                <h5 class="title-left">
+                  Puntuación obtenida:
+                </h5>
+              </div>
+              <div class="card-img" align = 'center'>
                 <a><img src="img\proyecto1_resultado.jpg" alt="" class="img-fluid"></a>
               </div>
             </div>
+            <br>
             <br>
             <div class=" col-sm-12">
               <div class="title-box">
@@ -218,7 +229,8 @@
               </div>
             </div>
           </div>
-        </div><div class="col-md-12">
+        </div>
+        <div class="col-md-12">
           <div class="service-box">
             <a href="portafolio-completo.html">
               <div class="work-content">
