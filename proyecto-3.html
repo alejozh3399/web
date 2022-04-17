@@ -147,9 +147,6 @@
                         <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img
                             src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
                             alt="scikit_learn" width="40" height="40" /> </a>
-                        <a href="https://lightgbm.readthedocs.io/en/latest/" target="_blank" rel="noreferrer"> <img
-                            src="https://unblockerai.s3-us-west-2.amazonaws.com/ubnpublic/a581b68f-6795-4224-b8a9-b7bb340c7144-tech-logo-lightgbm.png"
-                            alt="pytorch" width="40" height="40" /> </a>
                         </a>
                       </p>
                     </div>
@@ -158,24 +155,24 @@
                 <br>
                 <div class="skill-mf">
                   <p class="title-s">Evaluación del modelo</p>
-                  <span>MAE:</span> <span class="pull-right">0.36</span>
+                  <span>Jaccard score:</span> <span class="pull-right">73%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 36%;" aria-valuenow="36"
+                    <div class="progress-bar" role="progressbar" style="width: 73%;" aria-valuenow="73"
                       aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <span>MSE:</span> <span class="pull-right">0.25</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>R2:</span> <span class="pull-right">96%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 96%" aria-valuenow="96" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>Final score (kaggle):</span> <span class="pull-right">84%</span>
+                  <span>F1 score:</span> <span class="pull-right">84%</span>
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>Precision score:</span> <span class="pull-right">84%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>Final score (kaggle):</span> <span class="pull-right">79%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 79%" aria-valuenow="79" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
                 </div>
@@ -192,10 +189,9 @@
                     transportados por la anomalía en la nave espacial Titanic.
                   </p>
                   <p align='justify'>
-                    El modelo construido es un conjunto de tres modelos; una red neuronal de cinco capas (dos capas de
-                    256 neuronas, una de 128 neuronas, una capa de salida y una capa de desconexión), un modelo de
-                    clasificación Xgboost y un modelo de clasificación lightgbm. Estos tres modelos alimentan a su vez
-                    un modelo de bosque aleatorio que arroja las predicciones finales.
+                    El modelo es un conjunto de dos modelos; una red neuronal de siete capas, un modelo de clasificación
+                    Xgboost y para finalizar un modelo de clasificación Xgboost que es alimentado por las predicciones
+                    de los dos modelos previos.
                   </p>
                 </div>
               </div>
@@ -205,8 +201,8 @@
                   Puntuación obtenida:
                 </h5>
               </div>
-              <div class="card-img" align = 'center'>
-                <a><img src="img\proyecto1_resultado.jpg" alt="" class="img-fluid"></a>
+              <div class="card-img" align='center'>
+                <a><img src="img\proyecto3_resultado.jpg" alt="" class="img-fluid"></a>
               </div>
             </div>
             <br>
@@ -219,12 +215,12 @@
                   </h5>
                 </div>
                 <li>
-                  <a href="https://colab.research.google.com/drive/1rsIVGKncCspot18mMqYei13-zRC63L0C?usp=sharing">Codigo
+                  <a href="https://colab.research.google.com/drive/1jsc-d1A3n-HPGK7rl4CXrFDTITucHPjs?usp=sharing">Codigo
                     en linea (colab)</a>
                 </li>
                 <li>
                   <a
-                    href="https://github.com/crisdavid3335/analytics_with_KERAS/blob/7184fac5f2a3aa8f02589f1d3480e162cb7956a0/StoreSalesTimeSeriesForecasting.ipynb">Github</a>
+                    href="https://github.com/crisdavid3335/analytics_with_KERAS/blob/0eb9cb21875083acfcc6b89509c25700177831b2/SpaceshipTitanic.ipynb">Github</a>
                 </li>
               </div>
             </div>
