@@ -73,7 +73,7 @@
         <div class="container">
           <h2 class="intro-title mb-4">Proyectos</h2>
           <ol class="breadcrumb d-flex justify-content-center">
-            <li class="breadcrumb-item active">Concursos Kaggle</li>
+            <li class="breadcrumb-item active">Clasificación con datos desbalanceados</li>
           </ol>
         </div>
       </div>
@@ -92,50 +92,28 @@
                 <div class="title-box">
                   <div class="title-box text-center">
                     <h3 class="title-a">
-                      COVID19
-                      <br>
-                      Previsión global (Semana 2)
+                      Detección de fraudes con tarjetas de crédito
                     </h3>
                     <div class="line-mf"></div>
                   </div>
-                  <p align='justify'>
-                    Para ver la competición de kaggle de
-                    <a href="https://www.kaggle.com/competitions/covid19-global-forecasting-week-2">clic aquí.</a>
+                  <p class='lead' align='justify'>
+                    Es importante que las empresas de tarjetas de crédito sean capaces de reconocer las transacciones
+                    fraudulentas con tarjetas de crédito para que no se cobre a los clientes por artículos que no han
+                    comprado.
                   </p>
                   <p class='lead' align='justify'>
-                    La Oficina de Política Científica y Tecnológica de la Casa Blanca (OSTP) reunió a una coalición de
-                    grupos de investigación y empresas (incluyendo a Kaggle) para preparar el Conjunto de Datos de
-                    Investigación Abierta COVID-19 (CORD-19) con el fin de intentar abordar las preguntas científicas
-                    abiertas clave sobre COVID-19. Dichas preguntas proceden de las Academias Nacionales de Ciencias,
-                    Ingeniería y Medicina (NASEM) y de la Organización Mundial de la Salud (OMS).
+                    El conjunto de datos analizado contiene transacciones realizadas con tarjetas de crédito en
+                    septiembre de 2013 por titulares de tarjetas europeas.
                   </p>
                   <p class='lead' align='justify'>
-                    Kaggle está lanzando un desafío complementario de previsión de COVID-19 para ayudar a responder a un
-                    subconjunto de las preguntas de la NASEM/OMS. Aunque el reto consiste en predecir los casos
-                    confirmados y las muertes entre el 1 y el 30 de abril por región, el objetivo principal no es sólo
-                    producir previsiones precisas. También es identificar los factores que parecen influir en la tasa de
-                    transmisión del COVID-19.
+                    Este conjunto de datos presenta transacciones ocurridas en dos días, donde tenemos 492 fraudes de
+                    284.807 transacciones. El conjunto de datos está muy desequilibrado, la clase positiva (fraudes)
+                    representa el 0,172% de todas las transacciones.
                   </p>
                   <p class='lead' align='justify'>
-                    Se le anima a que extraiga, recopile y comparta las fuentes de datos que puedan ser útiles. Si
-                    encuentras variables que parecen tener un impacto en la tasa de transmisión, por favor comparte tu
-                    hallazgo en un cuaderno.
-                  </p>
-                  <p class='lead' align='justify'>
-                    A medida que los datos estén disponibles, actualizaremos la tabla de clasificación con los
-                    resultados en vivo basados en los datos puestos a disposición por el Centro de Ciencia e Ingeniería
-                    de Sistemas de la Universidad Johns Hopkins (JHU CSSE).
-                  </p>
-                  <p class='lead' align='justify'>
-                    Hemos recibido el apoyo y la orientación de organizaciones sanitarias y políticas para lanzar estos
-                    retos. Esperamos que la comunidad de Kaggle pueda hacer valiosas contribuciones para desarrollar una
-                    mejor comprensión de los factores que afectan a la transmisión de COVID-19.
-                  </p>
-                  <p class='lead' align='justify'>
-                    <strong>Agradecimientos</strong>
-                    <br>
-                    JHU CSSE por poner los datos a disposición del público. A la OSTP de la Casa Blanca por reunir las
-                    preguntas abiertas clave.
+                    Dado el ratio de desequilibrio de clases, recomendamos medir la precisión utilizando el Área Bajo la
+                    Curva de Precisión-Recuperación (AUPRC). La precisión de la matriz de confusión no es significativa
+                    para la clasificación desequilibrada.
                   </p>
                 </div>
               </div>
@@ -165,29 +143,6 @@
                   </div>
                 </div>
                 <br>
-                <div class="skill-mf">
-                  <p class="title-s">Evaluación del modelo</p>
-                  <span>Jaccard score:</span> <span class="pull-right">73%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 73%;" aria-valuenow="73"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <span>F1 score:</span> <span class="pull-right">84%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>Precision score:</span> <span class="pull-right">84%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>Final score (kaggle):</span> <span class="pull-right">79%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 79%" aria-valuenow="79" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                </div>
               </div>
               <div class="col-md-6">
                 <div class="about-me pt-4 pt-md-0">
@@ -197,21 +152,11 @@
                     </h5>
                   </div>
                   <p align='justify'>
-                    El proyecto consiste en una aplicación de aprendizaje automático para predecir la cantidad de
-                    contagios producidos por covid-19. Para ello se ha utilizado un conjunto de modelos de redes
-                    neuronales con la API de Keras.
+                    Se genero un modelo de clasificación que consta en una red neuronal de 6 capas. La red cuenta con 5
+                    capas ocultas; tres capas densas con 256 neuronas cada una y dos capas de desconexión que eliminan un
+                    tercio de los parametros cada una. La capa de salida es una capa densa con activación sigmoide.
                   </p>
                 </div>
-              </div>
-              <br>
-              <br>
-              <div class="title-box-2">
-                <h5 class="title-left">
-                  Puntuación obtenida:
-                </h5>
-              </div>
-              <div class="card-img" align='center'>
-                <a><img src="img\proyecto3_resultado.jpg" alt="" class="img-fluid"></a>
               </div>
             </div>
             <br>
@@ -224,17 +169,35 @@
                   </h5>
                 </div>
                 <li>
-                  <a href="https://colab.research.google.com/drive/1jsc-d1A3n-HPGK7rl4CXrFDTITucHPjs?usp=sharing"
+                  <a href="https://colab.research.google.com/drive/1Q42rtv3VUguax_T3Jv9OYPYmeTvC_HdH?usp=sharing"
                     target="_blank" rel="noreferrer">Codigo en linea (colab)</a>
                 </li>
                 <li>
-                  <a href="https://github.com/crisdavid3335/analytics_with_KERAS/blob/0eb9cb21875083acfcc6b89509c25700177831b2/SpaceshipTitanic.ipynb"
+                  <a href="https://github.com/crisdavid3335/analytics_with_KERAS/blob/b76dc8c9ec676f8a08785c4da22a2f088a23edea/CreditCardFraudDetection.ipynb"
                     target="_blank" rel="noreferrer">Github</a>
+                </li>
+              </div>
+            </div>
+            <div class=" col-sm-12">
+              <div class="title-box">
+                <div class="title-box-2">
+                  <h5 class="title-left">
+                    Material descargable
+                  </h5>
+                </div>
+                <li>
+                  <a href="material-tutoriales\creditcard.csv">Datos para el análisis</a>
+                </li>
+                <li>
+                  <a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud">Datos para el análisis (Kaggle)</a>
                 </li>
               </div>
             </div>
           </div>
         </div>
+        <!--termina la sección-->
+        
+        <!--Empieza la linea del portafolio-->
         <div class="col-md-12">
           <div class="service-box">
             <a href="portafolio-completo.html">
