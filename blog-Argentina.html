@@ -106,12 +106,12 @@
               </ul>
             </div>
             <div class="article-content">
-              <h5 align = 'center'>Introducción</h5>
+              <h5 align='center'>Introducción</h5>
               <p align='justify'>
                 Un problema de mucho tiempo, un problema muy discutido, en la radio, en la tele, en redes.... el
                 problema de la inflación en Argentina parece no solucionarse sin importar quien haya estado al mando del
                 país. Sin embargo, nuevas perspectivas mucho más ortodoxas han venido despertando el interés del público
-                más joven. "Siempre y en todo lugar" la inflación es un fenómeno monetario se repite una y otra vez.
+                más joven. "Siempre y en todo lugar la inflación es un fenómeno monetario" se repite una y otra vez.
               </p>
               <p align='justify'>
                 Independientemente de la escuela de economía a la que uno se suscriba o incluso si es la primera vez que
@@ -123,6 +123,54 @@
                 Dado que no se trata de un análisis causal, sólo pretende dar una presentación didáctica de cómo se
                 puede desarrollar un análisis de selección de variables para un modelo de regresión, así como de las
                 herramientas que se aplican en su realización. Entonces, partamos de un enfoque ingenuo...
+              </p>
+              <p align='justify'>
+                La mencionada frase "la inflación es siempre y en todas partes un fenómeno monetario" se atribuye
+                comúnmente al economista Milton Friedman. Un economista con una fuerte línea positivista y que era
+                partidario del utilitarismo metodológico (al menos en su trabajo "Essays in Positive Economics" de
+                1966). Es decir, Milton estaba muy a favor de la evidencia empírica. Esto no significa que despreciara
+                la teoría, sólo que para alguien como Friedman la teoría debía ser probada y considerada en la medida en
+                que explicara o predijera correctamente la realidad.
+              </p>
+              <h5 align='center'>El modelo</h5>
+              <p align='justify'>
+                Entonces supongamos que no tenemos idea si la inflación es multicausal o netamente un fenómeno
+                monetario. Simplemente consideramos que existe una variable inflación (&#928) que es afectada por un
+                conjunto de variables diferentes (X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>... X<sub>n</sub>). Esto
+                puede expresarse como una simple
+                función:
+              </p>
+              <p align='center'>
+                &#928 = f(X<sub>1</sub> + X<sub>2</sub> + X<sub>3</sub> + ... + X<sub>n</sub>)
+              </p>
+              <p align='justify'>
+                Cuando las relaciones son desconocidas uno puede pensar en redes neuronales, eso está bien; sin embargo,
+                las redes no permiten una alta interpretabilidad de lo que está pasando en ellas. Una forma bastante
+                popular y que permite cierto grado de interpretación son los modelos de árboles de decisión. Y de los
+                algoritmos basados en árboles de decision, uno de los más poderosos es el XGBOOST.
+              </p>
+              <p align='justify'>
+                Para esto se usaron datos de:
+                <li> <a href="https://datos.bancomundial.org/country/AR">Banco de datos del banco mundial</a></li>
+                <li> <a href="https://www.indexmundi.com/es/datos/argentina/masa-monetaria">Banco de datos del FMI</a>
+                </li>
+                <li> <a href="https://www.rug.nl/ggdc/productivity/pwt/?lang=en">La base de datos Penn World Table.</a>
+                </li>
+              </p>
+              <h5 align='center'>Conclusiones</h5>
+              <p align='justify'>
+                Una vez se ha completado el análisis se puede destacar lo siguiente; desde la primera modelación en un
+                modelo básico y con todas las variables que se pudieron recolectar, la inflación de la Argentina estaba
+                extremadamente ligada al crecimiento de la masa monetaria (% anual). Esto se repitió con la modelación
+                con los datos normalizados. Luego de implementar un algoritmo de selección de variables (entre las que
+                salió seleccionada el crecimiento de la masa monetaria) y de optimizar los hyperparametros del modelo
+                mediante un método automático, se puede concluir que; la inflación y el crecimiento de la masa monetaria
+                (% anual) son variables que se presentan una relación muy fuerte en la Argentina, una relación al menos
+                4 veces más fuerte que con la siguiente variable a considerar.
+              </p>
+              <p align='justify'>
+                Para terminar, esto deja claro que la emisión monetaria en la Argentina es la principal variable que
+                explica (o responde a) la inflación.
               </p>
               <div class="card-img">
                 <a><img src="img/clusters_1.png" alt="" class="img-fluid"></a>
@@ -140,14 +188,15 @@
             </div>
             <div class="more-info">
               <li>
-                <a href="material-tutoriales\calificaciones-de-matematicas.csv">Datos para el análisis</a>
+                <a href="material-tutoriales\argentina.xlsx">Datos utilizados el análisis</a>
               </li>
               <li>
-                <a href="material-tutoriales\post1.ipynb">Código ejemplo</a>
+                <a href="material-tutoriales\Argentina.ipynb">Código ejemplo</a>
               </li>
               <li>
-                <a href="https://drive.google.com/file/d/1ryJbsa6KgnwhVdZpczJgWQoIikjneiKW/view?usp=sharing">Código
-                  ejemplo (en línea - colab)</a>
+                <a
+                  href="https://github.com/crisdavid3335/analytics_with_KERAS/blob/a59e21804a405e0de125c8904e771b4912847329/Argentina.ipynb">Código
+                  ejemplo (github)</a>
               </li>
             </div>
           </div>
